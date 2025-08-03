@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <p>
+        <label for="">Username</label>
+        <input type="text" name="user" value="{{ user[1] }}" />
+      </p>
+      <p>
+        <label for="">PASSWORD</label>
+        <input type="password" name="password" value="{{ user[2] }}" />
+      </p>
+      <p>
+        <label for="">Email</label>
+        <input type="email" name="email" value="{{ user[3] }}" />
+      </p>
+      <p>
+        <label for="">Full name</label>
+        <input type="text" name="fullname" value="{{ user[4] }}" />
+      </p>
+      <button type="submit">Update</button>
+    </form>
+    <a href="{{ url_for('home') }}">← Quay lại</a>
+  </body>
+</html>

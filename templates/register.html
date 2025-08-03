@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Register</h2>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+    <div>
+      <form action="#" method="post">
+        <p>
+          <label for="">Username</label>
+          <input type="text" name="user" />
+        </p>
+        <p>
+          <label for="">PASSWORD</label>
+          <input type="password" name="password" />
+        </p>
+        <p>
+          <label for="">Email</label>
+          <input type="email" name="email" />
+        </p>
+        <p>
+          <label for="">Full name</label>
+          <input type="text" name="fullname" />
+        </p>
+        <button type="submit">Register</button>
+      </form>
+      <p>Đã có tài khoản? <a href="{{ url_for('login') }}">Đăng nhập</a></p>
+    </div>
+  </body>
+</html>
