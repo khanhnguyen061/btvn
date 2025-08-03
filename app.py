@@ -19,7 +19,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-@app.route('/home',methods = ['POST','GET'])
+@app.route('/',methods = ['POST','GET'])
 def home():
     if 'id' in session:
         conn = sqlite3.connect('users.db')
